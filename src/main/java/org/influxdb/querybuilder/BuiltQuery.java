@@ -77,6 +77,10 @@ public abstract class BuiltQuery extends Query implements QueryStringBuilder {
       return new SelectionQueryImpl(new SelectionCoreImpl(columns));
     }
 
+    public static ShowSeriesQueryImpl series() {
+      return new ShowSeriesQueryImpl();
+    }
+
     public static Clause eq(final String name, final Object value) {
       return new SimpleClause(name, EQ, value);
     }
